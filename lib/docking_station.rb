@@ -10,3 +10,5 @@ end
 # newBike = DockingStation.new
 # newBike.release_bike
 
+"Hi phil"
+
