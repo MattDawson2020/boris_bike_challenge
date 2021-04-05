@@ -1,11 +1,12 @@
 require "docking_station.rb"
 
 describe DockingStation do
-  let(:bike) { Bike.new }
+  let(:bike) { double :bike }
 
   describe '#release_bikes' do
     before do 
       subject.dock(bike)
+      allow(bike).to receive(:working?).and_return(true)
     end
 
     it "It responds to release bike" do
@@ -13,11 +14,12 @@ describe DockingStation do
     end
 
     it "Releases the bike" do
-      expect(subject.release_bike).to be_instance_of Bike
+      expect(subject.release_bike).to eq(bike)
     end
 
     it "does not release a broken bike" do
-      bike.report_broken
+      allow(bike).to receive(:report_broken).and_return(false)
+      allow(bike).to receive(:working?).and_return(false)
       expect { subject.release_bike }.to raise_error 'Bike broken'
     end
     
