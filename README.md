@@ -6,7 +6,7 @@ The learning objectives for this week were:
 -Follow an appropriate debugging process to 'tighten the loop' and 'gain visbility' when faced with bugs
 -Basic class structure and attributes
 
-```
+-----
 # boris_bike_challenge
 This is a program designed to let a user rent a bike by using multiple payment systems via a docking station. 
 
