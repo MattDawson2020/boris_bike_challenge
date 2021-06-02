@@ -6,9 +6,6 @@ The learning objectives for this week were:
 * Follow an appropriate debugging process to 'tighten the loop' and 'gain visbility' when faced with bugs
 * Basic class structure and attributes
 
-```
-
-```
 
 -----
 # boris_bike_challenge
